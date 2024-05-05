@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Downloader</title>
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container Styles */
+       .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* Heading Styles */
+       .heading {
+            text-align: center;
+            color: #007bff;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        /* Form Styles */
+       .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Download YouTube Video</h1>
+        </div>
+        <div class="form-container">
+            <form action="/download" method="POST">
+                <div>
+                    <label for="videoUrl">Video URL:</label>
+                    <input type="text" id="videoUrl" name="videoUrl" placeholder="Enter video URL" required>
+                </div>
+                <div>
+                    <label for="saveDirectory">Save Directory:</label>
+                    <input type="text" id="saveDirectory" name="saveDirectory" placeholder="Enter save directory" required>
+                </div>
+                <button type="submit">Download</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
